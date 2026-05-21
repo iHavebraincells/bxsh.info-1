@@ -1,11 +1,62 @@
--- ============================================================
---   eternal | clean rewrite
---   fixes: duplicate vars, wrong config keys, esp cleanup,
---          prison life filter, godmode key, scope issues
--- ============================================================
-
+--[[
+                                                                                                                               
+                                                                                                                               
+                             tttt                                                                                      lllllll 
+                          ttt:::t                                                                                      l:::::l 
+                          t:::::t                                                                                      l:::::l 
+                          t:::::t                                                                                      l:::::l 
+    eeeeeeeeeeee    ttttttt:::::ttttttt        eeeeeeeeeeee    rrrrr   rrrrrrrrr   nnnn  nnnnnnnn      aaaaaaaaaaaaa    l::::l 
+  ee::::::::::::ee  t:::::::::::::::::t      ee::::::::::::ee  r::::rrr:::::::::r  n:::nn::::::::nn    a::::::::::::a   l::::l 
+ e::::::eeeee:::::eet:::::::::::::::::t     e::::::eeeee:::::eer:::::::::::::::::r n::::::::::::::nn   aaaaaaaaa:::::a  l::::l 
+e::::::e     e:::::etttttt:::::::tttttt    e::::::e     e:::::err::::::rrrrr::::::rnn:::::::::::::::n           a::::a  l::::l 
+e:::::::eeeee::::::e      t:::::t          e:::::::eeeee::::::e r:::::r     r:::::r  n:::::nnnn:::::n    aaaaaaa:::::a  l::::l 
+e:::::::::::::::::e       t:::::t          e:::::::::::::::::e  r:::::r     rrrrrrr  n::::n    n::::n  aa::::::::::::a  l::::l 
+e::::::eeeeeeeeeee        t:::::t          e::::::eeeeeeeeeee   r:::::r              n::::n    n::::n a::::aaaa::::::a  l::::l 
+e:::::::e                 t:::::t    tttttte:::::::e            r:::::r              n::::n    n::::na::::a    a:::::a  l::::l 
+e::::::::e                t::::::tttt:::::te::::::::e           r:::::r              n::::n    n::::na::::a    a:::::a l::::::l
+ e::::::::eeeeeeee        tt::::::::::::::t e::::::::eeeeeeee   r:::::r              n::::n    n::::na:::::aaaa::::::a l::::::l
+  ee:::::::::::::e          tt:::::::::::tt  ee:::::::::::::e   r:::::r              n::::n    n::::n a::::::::::aa:::al::::::l
+    eeeeeeeeeeeeee            ttttttttttt      eeeeeeeeeeeeee   rrrrrrr              nnnnnn    nnnnnn  aaaaaaaaaa  aaaallllllll
+                                                                                                                               
+                                                                                                                               
+                                                        made by 223.bxsh                                                                           
+                                                                                                                               
+                                                                                                                               
+                                                                                                                               
+                                                                                                                               
+--]]
 -- UI Library
 local ui = loadstring(game:HttpGet("https://cdn.bxsh.info/UIlibrary's/eternal.lua"))()
+
+print("
+
+                                                                                                                               
+                                                                                                                               
+                             tttt                                                                                      lllllll 
+                          ttt:::t                                                                                      l:::::l 
+                          t:::::t                                                                                      l:::::l 
+                          t:::::t                                                                                      l:::::l 
+    eeeeeeeeeeee    ttttttt:::::ttttttt        eeeeeeeeeeee    rrrrr   rrrrrrrrr   nnnn  nnnnnnnn      aaaaaaaaaaaaa    l::::l 
+  ee::::::::::::ee  t:::::::::::::::::t      ee::::::::::::ee  r::::rrr:::::::::r  n:::nn::::::::nn    a::::::::::::a   l::::l 
+ e::::::eeeee:::::eet:::::::::::::::::t     e::::::eeeee:::::eer:::::::::::::::::r n::::::::::::::nn   aaaaaaaaa:::::a  l::::l 
+e::::::e     e:::::etttttt:::::::tttttt    e::::::e     e:::::err::::::rrrrr::::::rnn:::::::::::::::n           a::::a  l::::l 
+e:::::::eeeee::::::e      t:::::t          e:::::::eeeee::::::e r:::::r     r:::::r  n:::::nnnn:::::n    aaaaaaa:::::a  l::::l 
+e:::::::::::::::::e       t:::::t          e:::::::::::::::::e  r:::::r     rrrrrrr  n::::n    n::::n  aa::::::::::::a  l::::l 
+e::::::eeeeeeeeeee        t:::::t          e::::::eeeeeeeeeee   r:::::r              n::::n    n::::n a::::aaaa::::::a  l::::l 
+e:::::::e                 t:::::t    tttttte:::::::e            r:::::r              n::::n    n::::na::::a    a:::::a  l::::l 
+e::::::::e                t::::::tttt:::::te::::::::e           r:::::r              n::::n    n::::na::::a    a:::::a l::::::l
+ e::::::::eeeeeeee        tt::::::::::::::t e::::::::eeeeeeee   r:::::r              n::::n    n::::na:::::aaaa::::::a l::::::l
+  ee:::::::::::::e          tt:::::::::::tt  ee:::::::::::::e   r:::::r              n::::n    n::::n a::::::::::aa:::al::::::l
+    eeeeeeeeeeeeee            ttttttttttt      eeeeeeeeeeeeee   rrrrrrr              nnnnnn    nnnnnn  aaaaaaaaaa  aaaallllllll
+                                                                                                                               
+                                                                                                                               
+                                                        made by 223.bxsh                                                                           
+                                                                                                                               
+                                                                                                                               
+                                                                                                                               
+                                                                                                                               
+
+")
 
 -- Services
 local players    = game:GetService("Players")
