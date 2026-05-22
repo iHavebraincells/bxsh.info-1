@@ -285,7 +285,7 @@ do
 	runservice.Heartbeat:Connect(function()
 		local now = tick()
 		if now - last >= 1 then
-			watermark.Title = "eternal | @" .. username .. " | " .. os.date("%d-%m-%y")
+			watermark.Title = "eternal | made by 223.bxsh " | " .. os.date("%d-%m-%y")
 			last = now
 		end
 	end)
