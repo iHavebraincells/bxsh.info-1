@@ -285,7 +285,7 @@ do
 	runservice.Heartbeat:Connect(function()
 		local now = tick()
 		if now - last >= 1 then
-			watermark.Title = "eternal | made by 223.bxsh " | " .. os.date("%d-%m-%y")
+			watermark.Title = "eternal | made by 223.bxsh "
 			last = now
 		end
 	end)
@@ -691,17 +691,19 @@ end)
 -- ============================================================
 --   GAME STUFF TAB
 -- ============================================================
-local gt         = window:Tab({ Name = "game stuff" })
-local prison_s   = gt:Section({ Name = "prison life",   Side = "Left"  })
-local cali_s  = gt:Section({ Name = "cali shootout",  Side = "Right" })
+local gt       = window:Tab({ Name = "game stuff" })
+local prison_s = gt:Section({ Name = "prison life",   Side = "Left" })
+local cali_s   = gt:Section({ Name = "cali shootout", Side = "Right" })
 
 prison_s:Button({
 	Name = "Crim Base",
 	Callback = function()
-		local c   = lp.Character or lp.CharacterAdded:Wait()
+		local c = lp.Character or lp.CharacterAdded:Wait()
+		local root = c:WaitForChild("HumanoidRootPart")
+
 		local mdl = workspace:FindFirstChild("Criminals Spawn")
 		if mdl and mdl:IsA("Model") then
-			c:WaitForChild("HumanoidRootPart").CFrame = mdl:GetPivot() + Vector3.new(0, 5, 0)
+			root.CFrame = mdl:GetPivot() + Vector3.new(0, 5, 0)
 		else
 			warn("[eternal] Criminals Spawn not found")
 		end
@@ -711,42 +713,33 @@ prison_s:Button({
 prison_s:Button({
 	Name = "Prison",
 	Callback = function()
-		local c   = lp.Character or lp.CharacterAdded:Wait()
+		local c = lp.Character or lp.CharacterAdded:Wait()
+		local root = c:WaitForChild("HumanoidRootPart")
+
 		local mdl = workspace:FindFirstChild("Prison_Cellblock")
 		if mdl and mdl:IsA("Model") then
-			c:WaitForChild("HumanoidRootPart").CFrame = mdl:GetPivot() + Vector3.new(0, 5, 0)
+			root.CFrame = mdl:GetPivot() + Vector3.new(0, 5, 0)
 		else
 			warn("[eternal] Prison_Cellblock not found")
 		end
 	end,
 })
 
-fleefac_s:Button({
+cali_s:Button({
 	Name = "CIA base",
 	Callback = function()
-ocal function Callback()
-    local character = lp.Character or lp.CharacterAdded:Wait()
-    local root = character:WaitForChild("HumanoidRootPart", 5)
+		local character = lp.Character or lp.CharacterAdded:Wait()
+		local root = character:WaitForChild("HumanoidRootPart", 5)
 
-    if not root then
-        return
-    end
+		if not root then return end
 
-    local turfCrates = workspace:WaitForChild("TurfCrates", 10)
-    if not turfCrates then
-        return
-    end
+		local turfCrates = workspace:WaitForChild("TurfCrates", 10)
+		if not turfCrates then return end
 
-    local pistolModel = turfCrates:FindFirstChild("CIAAR15Pistol")
-    if not pistolModel or not pistolModel:IsA("Model") then
-        return
-    end
+		local pistolModel = turfCrates:FindFirstChild("CIAAR15Pistol")
+		if not pistolModel or not pistolModel:IsA("Model") then return end
 
-    local modelCFrame = pistolModel:GetPivot()
-
-    -- teleport in front of it
-    root.CFrame = modelCFrame * CFrame.new(0, 3, -8)
-end
+		root.CFrame = pistolModel:GetPivot() * CFrame.new(0, 3, -8)
 	end,
 })
 
